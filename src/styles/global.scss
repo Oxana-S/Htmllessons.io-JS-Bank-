@@ -1,0 +1,51 @@
+@use 'variables' as v;
+@use 'reset';
+@use 'keyframes';
+
+input,
+button,
+body {
+	font-family: v.$font;
+}
+
+body {
+	background-color: #689dce;
+	color: v.$white;
+	font-size: 17px;
+	line-height: 1.6;
+}
+
+input {
+	font-size: 16px;
+	background-color: transparent;
+	color: v.$white;
+
+	&::placeholder {
+		color: v.$text-gray;
+	}
+}
+
+a {
+	color: v.$white;
+	text-decoration: none;
+	transition: border-color 0.3s ease-in-out;
+	border-bottom: 1px solid transparent;
+	animation: fadeIn 0.4s;
+
+	&:hover {
+		border-color: v.$primary;
+	}
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+// @import 'keyframes';
+
